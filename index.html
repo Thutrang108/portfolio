@@ -126,8 +126,10 @@ h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;line-heigh
 .metric b{display:block;font-family:var(--display);font-weight:500;font-size:clamp(44px,6vw,72px);line-height:1;font-variant-numeric:tabular-nums}
 .metric span{font-size:14px;color:#b8b4ac}
 .shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;max-width:760px;align-items:start}
-.gallery{columns:3 230px;column-gap:14px}
-.gallery figure{break-inside:avoid;margin-bottom:14px}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:880px;align-items:start}
+.gallery .gcol{display:flex;flex-direction:column;gap:12px;min-width:0}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:auto;display:block}
 .zoom{cursor:zoom-in;transition:opacity .2s}
 .zoom:hover{opacity:.9}
 figure figcaption{font-size:12.5px;color:#a9a59d;margin-top:8px;line-height:1.5}
@@ -229,7 +231,7 @@ footer a{text-decoration:none}
   .clist .k{grid-column:1/-1}
   .frgrid,.p-media.three{grid-template-columns:1fr 1fr}
   .shots{grid-template-columns:1fr}
-  .gallery{columns:2 140px}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
   .tab{flex:1 1 100%;text-align:left}
 }
 .project>*,.split>*,.hero .wrap>*,.about .wrap>*,.contact .wrap>*,.p-media>*{min-width:0}
@@ -365,13 +367,10 @@ footer a{text-decoration:none}
         <h4>Một số nội dung đã thực hiện</h4>
         <p>Phong cách edit thanh lịch, sang trọng. Concept được chọn từ việc nghiên cứu và kết hợp hai tiêu chí: phong cách thương hiệu hướng tới và phong cách khách hàng ưa chuộng.</p>
         <div class="gallery">
-          <figure><img class="zoom" src="img/g03.jpg" alt="Danh sách Reels của Fanpage KANEL" width="900" height="1550"></figure>
-          <figure><img class="zoom" src="img/g04.jpg" alt="Danh sách Reels của Fanpage KANEL" width="877" height="1550"></figure>
-          <figure><img class="zoom" src="img/g12.jpg" alt="Banner Sophisticated Style" width="1000" height="563"></figure>
-          <figure><img class="zoom" src="img/g13.jpg" alt="Poster Grand Opening KANEL Quảng Ninh" width="990" height="1400"></figure>
-          <figure><img class="zoom" src="img/g14.jpg" alt="Banner Christmas 30% off" width="1000" height="563"></figure>
-          <figure><img class="zoom" src="img/g15.jpg" alt="Banner Live Passionately" width="1000" height="563"></figure>
-          <figure><img class="zoom" src="img/g16.jpg" alt="Poster Black Friday Sale" width="1000" height="1000"></figure>
+          <div class="gcol"><figure><img class="zoom" src="img/g03.jpg" alt="Danh sách Reels của Fanpage KANEL" width="900" height="1550"></figure></div>
+          <div class="gcol"><figure><img class="zoom" src="img/g04.jpg" alt="Danh sách Reels của Fanpage KANEL" width="877" height="1550"></figure></div>
+          <div class="gcol"><figure><img class="zoom" src="img/g13.jpg" alt="Poster Grand Opening KANEL Quảng Ninh" width="990" height="1400"></figure><figure><img class="zoom" src="img/g12.jpg" alt="Banner Sophisticated Style" width="1000" height="563"></figure></div>
+          <div class="gcol"><figure><img class="zoom" src="img/g16.jpg" alt="Poster Black Friday Sale" width="1000" height="1000"></figure><figure><img class="zoom" src="img/g14.jpg" alt="Banner Christmas 30% off" width="1000" height="563"></figure><figure><img class="zoom" src="img/g15.jpg" alt="Banner Live Passionately" width="1000" height="563"></figure></div>
           </div>
       </div>
     </div>
